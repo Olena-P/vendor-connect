@@ -19,9 +19,9 @@ export default function Sidebar({}: SidebarProps) {
   return (
     <aside className="fixed top-0 left-0 z-40 w-60 h-screen">
       <div className="flex flex-col h-full overflow-y-auto bg-gray-900">
-        <Link href="/" className="flex items-center py-8 mb-11 mx-auto gap-4">
+        <Link href="/" className="flex items-center py-8 mb-11 mx-auto gap-1">
           <Image width={32} height={32} src="/icons/logo.svg" alt="logo" />
-          <p>VendorСonnect</p>
+          <p className="font-medium text-zinc-50">VendorСonnect</p>
         </Link>
         <ul className="space-y-7">
           <SidebarItem
