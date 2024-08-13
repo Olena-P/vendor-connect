@@ -23,7 +23,7 @@ export default async function Page({}: PageProps) {
             >{`${countryTitle} - ${count}`}</p>
           ))}
         </div>
-        <Image width={395} height={262} src="/images/world.svg" alt="world" />
+        <Image width={395} height={262} src="/icons/world.svg" alt="world" />
       </div>
     </DashboardCard>
   );
