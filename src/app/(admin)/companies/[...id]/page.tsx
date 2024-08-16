@@ -1,15 +1,20 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Header from '@/app/components/header';
 import { notFound } from 'next/navigation';
 
 export interface PageProps {
-  params: { id: string[] };
+  params: { id?: string[] };
 }
 
 export default function Page({ params }: PageProps) {
   useEffect(() => {
+    // Check if params.id is undefined or doesn't have any elements
+    if (!params.id || params.id.length === 0) {
+      notFound();
+      return;
+    }
+
     const id = Number.parseInt(params.id[0]);
 
     if (Number.isNaN(id)) {
@@ -18,8 +23,8 @@ export default function Page({ params }: PageProps) {
   }, [params.id]);
 
   return (
-    <>
-      <Header>Company ({String(params.id[0])})</Header>
-    </>
+    <div className="py-6 px-10">
+      <p>{`Information about company (${params.id?.[0]})`}</p>
+    </div>
   );
 }
