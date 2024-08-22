@@ -1,8 +1,8 @@
 import React from 'react';
-import CompanyTable from '@/app/components/company-table';
-import { getCompanies } from '@/lib/api';
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
+import { getCompanies } from '@/lib/api';
 import getQueryClient from '@/lib/utils/getQueryClient';
+import CompanyTable from '@/app/components/company-table';
 
 export interface PageProps {}
 

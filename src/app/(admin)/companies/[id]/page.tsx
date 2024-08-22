@@ -1,10 +1,10 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
-import { HydrationBoundary, dehydrate } from '@tanstack/react-query';
+import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
+import { Company, getCompany, getPromotions } from '@/lib/api';
+import getQueryClient from '@/lib/utils/getQueryClient';
 import CompanyInfo from '@/app/components/company-info';
 import CompanyPromotions from '@/app/components/company-promotions';
-import getQueryClient from '@/lib/utils/getQueryClient';
-import { Company, getCompany, getPromotions } from '@/lib/api';
 
 export interface PageProps {
   params: { id: string };
